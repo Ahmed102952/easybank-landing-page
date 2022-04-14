@@ -1,0 +1,91 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+}
+img {
+    width: 100%;
+    display: block;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: $darkBlue;
+    display: block;
+}
+
+.continer {
+    max-width: 75rem;
+    margin: 0 auto;
+
+
+    &--px {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+// display 
+.flex {
+    display: flex;
+
+    &--ai-c {
+        align-items: center;
+    }
+    &--jc-sb {
+        justify-content: space-between;
+    }
+    &--dir-c {
+        flex-direction: column;
+    }
+} 
+.block {
+    display: block;
+}
+// positions 
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+
+// cursor 
+.pointer {
+    cursor: pointer;
+}
+
+// buttons 
+.btn {
+    width: 10.375rem;
+    height: 2.875rem;
+    background: linear-gradient(to right, $limeGreen, $brightCyan);
+    border-radius: 25px;
+    display: grid;
+    place-items: center;
+    color: $white;
+    font-weight: 700;
+}
+
+// responsive 
+.hide-for-desktop {
+    @include breakpoint-up(small) {
+        display: none;
+    }
+}
+.hide-for-mobile {
+    @include breakpoint-down(small) {
+        display: none;
+    }
+}

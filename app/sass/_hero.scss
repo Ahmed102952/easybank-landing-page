@@ -1,0 +1,113 @@
+.hero {
+    width: 100%;
+    padding-bottom: 5.625rem;
+    height: 40.625rem;
+    
+    
+    .mobile-intro-img {
+        position: relative;
+        min-height: 20rem;
+        overflow: hidden;
+        margin-bottom: 3.125rem;
+        background: url(../../assests/images/image-mockups.png);
+        background-size: 90%;
+        background-repeat: no-repeat;
+        background-position: center 70%;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        &::before {
+            background: url(../../assests/images/bg-intro-mobile.svg);
+            background-size: cover;
+            background-position-y: 5%;
+            background-repeat: no-repeat;
+        }
+    }
+    
+
+    .text-group {
+        text-align: center;
+        
+
+        h1 {
+            font-size: $font-xl;
+            color: $darkBlue;
+            font-weight: 400;
+            margin-bottom: 1.375rem;
+        }
+        p {
+            font-size: $font-xs;
+            color: $grayishBlue;
+            margin-bottom: 2.0625rem;
+        }
+    }
+    .btn {
+        margin: 0 auto;
+    }
+    
+    @include breakpoint-up(small) {
+        height: 40.625rem;
+        padding: 11.125rem 0;
+        .text-group {
+            width: 50%;
+            text-align: start;
+            height: 100%;
+
+            h1 {
+                font-size: $font-xxl;
+            }
+        }
+        .btn {
+            margin: 0;
+        }
+        // &::before,
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     right: 0;
+        //     top: 0;
+        //     width: 50%;
+        // }
+        .desktop-intro-img {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50%;
+            height: 40.625rem;
+            background: url(../../assests/images/bg-intro-desktop.svg);
+            background-position: 5% 76%;
+
+            
+
+        }
+        img {
+            position: absolute;
+            right: 0;
+            top: 0;
+            min-width: 42.875rem;
+            width: 120%;
+            max-width: 46.875rem;
+            height: 56.25rem;
+            transform: translate(22%, -10%);
+        }
+    }
+}
+@include breakpoint-down(mediam) {
+    .desktop-intro-img {
+        background-position: 8% 55%;
+    }
+
+    .hero .desktop-intro-img img {
+        width: 34rem;
+        height: 46.3rem;
+        min-width: 0;
+        transform: translate(25%, 0%);
+    }
+}
