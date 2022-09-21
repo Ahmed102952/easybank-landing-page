@@ -1,4 +1,4 @@
-# easybank-landing-page
+# Easybank Landing Page
 
 [A Frontend Mentor challange](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN)
 
