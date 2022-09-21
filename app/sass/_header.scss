@@ -13,8 +13,10 @@ header {
             color: $grayishBlue;
         }
     }
-    li:not(:last-child) {
-        margin-right: 1rem;
+    @include breakpoint-up(small) {
+        li:not(:last-child) {
+            margin-right: 1rem;
+        }
     }
     
 }
